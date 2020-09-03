@@ -1,0 +1,46 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='S4ISOIL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZSD_C_MULTIFUN_CDS" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="ZSD_C_MULTIFUNType" sap:label="Consumption view for Multifunction report" sap:content-version="1">
+				<Key><PropertyRef Name="vbeln"/><PropertyRef Name="posnr"/></Key><Property Name="vbeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Billing Document"
+					sap:creatable="false" sap:updatable="false"/><Property Name="posnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Item"
+					sap:quickinfo="Billing Item"/><Property Name="kunrg" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Payer" sap:creatable="false"
+					sap:updatable="false"/><Property Name="name1" Type="Edm.String" MaxLength="35" sap:label="Payer Name" sap:quickinfo="Name 1" sap:creatable="false"
+					sap:updatable="false"/><Property Name="kunde" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Ship-to" sap:creatable="false"
+					sap:updatable="false"/><Property Name="name_1" Type="Edm.String" MaxLength="35" sap:label="Ship-to Name" sap:quickinfo="Name 1" sap:creatable="false"
+					sap:updatable="false"/><Property Name="spart" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Division" sap:creatable="false"
+					sap:updatable="false"/><Property Name="zuonr" Type="Edm.String" MaxLength="18" sap:label="Assignment" sap:quickinfo="Assignment number" sap:creatable="false"
+					sap:updatable="false"/><Property Name="vgbel" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery Doc"
+					sap:quickinfo="Document number of the reference document" sap:creatable="false" sap:updatable="false"/><Property Name="arktx" Type="Edm.String" MaxLength="40" sap:label="Material Description" sap:quickinfo="Short Text for Sales Order Item"
+					sap:creatable="false" sap:updatable="false"/><Property Name="wadat_ist" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Actual GI date"
+					sap:quickinfo="Actual Goods Movement Date" sap:creatable="false" sap:updatable="false"/><Property Name="belnr" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Document Number"
+					sap:quickinfo="Accounting Document Number" sap:creatable="false" sap:updatable="false"/><Property Name="fkdat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Billing Date" sap:creatable="false"
+					sap:updatable="false"/><Property Name="fkart" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Billing Type" sap:creatable="false"
+					sap:updatable="false"/><Property Name="aubel" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Sales Order"
+					sap:quickinfo="Sales Document" sap:creatable="false" sap:updatable="false"/><Property Name="blart" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Document Type"
+					sap:quickinfo="Document type" sap:creatable="false" sap:updatable="false"/><Property Name="bldat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Document Date"
+					sap:quickinfo="Document Date in Document" sap:creatable="false" sap:updatable="false"/><Property Name="budat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Posting Date"
+					sap:quickinfo="Posting Date in the Document" sap:creatable="false" sap:updatable="false"/><Property Name="fiscyearper" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Year/Month"
+					sap:quickinfo="Period/year" sap:creatable="false" sap:updatable="false"/><Property Name="umskz" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Special G/L Ind."
+					sap:quickinfo="Special G/L Indicator" sap:creatable="false" sap:updatable="false"/><Property Name="drcrk" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Debit/Credit Ind."
+					sap:quickinfo="Debit/Credit Indicator" sap:creatable="false" sap:updatable="false"/><Property Name="zlsch" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Payment Method" sap:creatable="false"
+					sap:updatable="false"/><Property Name="zlspr" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Payment Block"
+					sap:quickinfo="Payment Block Key" sap:creatable="false" sap:updatable="false"/><Property Name="zterm" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Payment Terms"
+					sap:quickinfo="Terms of Payment Key" sap:creatable="false" sap:updatable="false"/><Property Name="netwr" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="waerk" sap:label="Amount in Local Currency"
+					sap:quickinfo="Net Value in Document Currency" sap:creatable="false" sap:updatable="false"/><Property Name="waerk" Type="Edm.String" MaxLength="5" sap:label="Local Currency" sap:quickinfo="SD document currency" sap:creatable="false"
+					sap:updatable="false" sap:semantics="currency-code"/><Property Name="augdt" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Clearing Date" sap:creatable="false"
+					sap:updatable="false"/><Property Name="augbl" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Clearing Document"
+					sap:quickinfo="Document Number of the Clearing Document" sap:creatable="false" sap:updatable="false"/><Property Name="sgtxt" Type="Edm.String" MaxLength="50" sap:label="Text" sap:quickinfo="Item Text" sap:creatable="false"
+					sap:updatable="false"/><Property Name="bran2" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Industry Sub Segment"
+					sap:quickinfo="Industry Sub-Segment" sap:creatable="false" sap:updatable="false"/><Property Name="knumv" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Doc Condition No"
+					sap:quickinfo="Number of the Document Condition" sap:creatable="false" sap:updatable="false"/><Property Name="kschl" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Condition Type"
+					sap:quickinfo="Condition type" sap:creatable="false" sap:updatable="false"/><Property Name="kawrt" Type="Edm.Decimal" Precision="24" Scale="9" sap:label="Basis Value" sap:quickinfo="Condition Basis Value"
+					sap:creatable="false" sap:updatable="false"/><Property Name="kbetr" Type="Edm.Decimal" Precision="24" Scale="9" sap:label="Amount" sap:quickinfo="Rate (Amount or Percentage)"
+					sap:creatable="false" sap:updatable="false"/></EntityType>
+			<EntityContainer Name="ZSD_C_MULTIFUN_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="ZSD_C_MULTIFUN" EntityType="ZSD_C_MULTIFUN_CDS.ZSD_C_MULTIFUNType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZSD_C_MULTIFUN_CDS/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZSD_C_MULTIFUN_CDS/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
